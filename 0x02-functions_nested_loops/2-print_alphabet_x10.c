@@ -1,15 +1,20 @@
 #include "main.h"
 /**
-* print_alphabet - Print alphabet in lowercase using only `_putchar`
-* Return: 0
+* print_alphabet_x10 - Make alphabet in lowercase x10 times
+*
+* Return: void
 */
-void print_alphabet(void)
+void print_alphabet_x10(void)
 {
-char c = 'a';
-while (c <= 'z')
+char c;
+int i = 0;
+while (i <= 9)
+{
+for (c = 'a'; c <= 'z'; c++)
 {
 _putchar(c);
-c++;
 }
 _putchar('\n');
+i++;
+}
 }
