@@ -1,5 +1,4 @@
 #include "lists.h"
-
 /**
  * free_listp - frees a linked list
  * @head: head of a list.
@@ -15,11 +14,13 @@ void free_listp(listp_t **head)
 	{
 		curr = *head;
 		while ((temp = curr) != NULL)
+
 		{
 			curr = curr->next;
 			free(temp);
 		}
 		*head = NULL;
+	}
 }
 
 /**
@@ -50,6 +51,7 @@ size_t print_listint_safe(const listint_t *head)
 		while (add->next != NULL)
 		{
 			add = add->next;
+
 			if (head == add->p)
 			{
 				printf("-> [%p] %d\n", (void *)head, head->n);
